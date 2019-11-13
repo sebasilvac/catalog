@@ -1,0 +1,107 @@
+.card {
+    background-color: #6F578B;
+    width: 300px;
+    height: 450px;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+
+    & .card-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        background-color: #6F578B;
+        padding-top: .3em;
+        border-radius: 5px 5px 5px 0px;
+        & img {
+            background-color: white;
+            padding: 1em;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        & .product-description {
+            position: absolute;
+            background-color: #6F578B;
+            top: 20px;
+            font-size: 15px;
+            height: 1.5em;
+            padding: 2px 5px;
+            color: rgba(255, 255, 255, .9);
+        }
+    }
+
+    & .card-body {
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+
+
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+
+        & .product-name {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        & .product-sku {
+            font-size: 12px;
+            color: rgba(255, 255, 255, .7);
+        }
+
+        
+
+        & .product-price {
+            text-align: center;
+            font-size: 30px;
+            color: rgba(255, 255, 255, .9);
+        }
+
+        & .btn-detail {
+
+            margin: 1em;
+            margin-bottom: .5em;
+            align-self: center;
+            
+            & .btn-more {
+                display: block;
+                cursor: pointer;
+                background-color: whitesmoke;
+                border-radius: 5px;
+                color: #6F578B;
+                font-variant: small-caps;
+                width: 100px;
+                line-height: 32px;
+                font-size: 18px;
+                text-decoration: none;
+                text-align: center;
+
+                transition: background 250ms ease-in-out, transform 150ms ease;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }     
+            & .btn-more:hover,
+            & .btn-more:focus {
+                transform: scale(1.1);
+            }
+
+            & .btn-more:focus {
+                outline: 1px solid #fff;
+                outline-offset: -4px;
+            }
+
+            & .btn-more:active {
+                transform: scale(0.95);
+            }
+        }
+    }
+}

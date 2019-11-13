@@ -1,0 +1,19 @@
+.cards {
+    min-height: calc( 100vh - 64px);
+
+    h2 {
+        padding-top: 1em;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+
+    .container-cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        align-content: flex-start;
+        width: 100%;
+    }
+}
