@@ -6,10 +6,7 @@ import './productdetail.scss';
 
 function ProductDetail(props) {
 
-    console.log("Producto Seleccionado", props.product)
-
     const data = useFetch(`http://localhost:3000/api/v1/products/${props.product}`);
-
 
     if (!data) {
         return <div>Loading...</div>;

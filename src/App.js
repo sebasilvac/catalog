@@ -22,50 +22,6 @@ function App() {
 
   const data = useFetch('http://localhost:3000/api/v1/products/1/15');
 
-
-
-
-  // const [dataPage, setDataPage] = useState({});
-  // const [product, setProduct] = useState(initProduct);
-
-  // const consultarAPI = async (page=1, limit=15) => {
-
-  //   try {
-  //     const result = await Axios(`http://localhost:3000/api/v1/products/${page}/${limit}`);
-  //     setProducts(result.data.data.products);
-  //     setDataPage(result.data.data);
-
-  //   } catch (err) {
-
-  //     console.log("error", err);
-  //     consultarAPI();
-  //   }
-  // }
-
-  // const consultarAPIBySku = async (sku) => {
-  
-  //   setProduct(initProduct);
-
-  //   console.log(sku);
-
-  //   try {
-  //     const result = await Axios(`http://localhost:3000/api/v1/products/${sku}`);
-  //     setProduct(result.data);
-
-  //   } catch (err) {
-  //     console.log("error", err);
-  //     consultarAPIBySku(sku);
-  //   }
-  // }
-
-  
-
-  
-
-  // useEffect(() => {
-  //   consultarAPI()
-  // }, []);
-
   return (
     <Router>
       <header>
