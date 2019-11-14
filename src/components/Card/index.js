@@ -19,12 +19,7 @@ function Card({product}) {
           <label className="product-sku">SKU: {product.sku}</label>
         </div>
 
-        
         <div className="product-price">{product.price}</div>
-
-
-        
-        {/* {product.longDescription} */}
 
         <div className="btn-detail">
           <Link className="btn-more"

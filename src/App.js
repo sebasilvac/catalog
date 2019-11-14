@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
-import Axios from 'axios';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Cards from './components/Cards';
 import ProductDetail from './components/ProductDetail';
-import Paginate from './components/Paginate';
 
 function App() {
 
@@ -20,7 +18,7 @@ function App() {
 
   const [products, setProducts] = useState([]);
 
-  const data = useFetch('http://localhost:3000/api/v1/products/1/15');
+  const data = useFetch('http://34.217.106.68:3000/api/v1/products/1/15');
 
   return (
     <Router>
@@ -69,7 +67,9 @@ const useFetch = url => {
 
   async function fetchData() {
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        mode: 'cors'
+      });
       const json = await response.json();
       setData(json);
     } catch (err){

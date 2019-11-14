@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import _ from 'underscore';
 import './productdetail.scss';
 
 
 function ProductDetail(props) {
 
-    const data = useFetch(`http://localhost:3000/api/v1/products/${props.product}`);
+    const data = useFetch(`http://34.217.106.68:3000/api/v1/products/${props.product}`);
 
     if (!data) {
         return <div>Loading...</div>;
@@ -51,7 +50,9 @@ const useFetch = url => {
     async function fetchData() {
 
         try {
-            const response = await fetch(url);
+            const response = await fetch(url, {
+                mode: 'cors'
+            });
             const json = await response.json();
             setData(json);
         } catch (err){
@@ -59,7 +60,9 @@ const useFetch = url => {
         }
     }
   
-    useEffect(() => {fetchData()},[url]);
+    useEffect(() => {
+        fetchData()
+    },[url]);
   
     return data;
   };
